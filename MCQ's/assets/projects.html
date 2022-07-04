@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../style.css" type="text/css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/41d5f40ef0.js" crossorigin="anonymous"></script>
+        <title> MCQ's - By Arav </title>
+    </head>
+    <body>
+        <!-- Header -->
+        <section class="header">
+            <div class="nav">
+                    <a href="index.html"> <img src="../images/logo.jpg"> </a>
+                </div>
+            <div class="header-text">
+                <h1> My Projects </h1>
+                <p> Here you will see some my projects </p>
+                <a href="../index.html"> MCQ's Made My Me </a>
+            </div>   
+        </section>
+        <!-- Menu -->
+        <div id="navLinks">
+            <nav>
+                <ul>
+                    <li> <a href="../index.html"> HOME </a> </li>
+                    <li> <a href="projects.html"> PROJECTS </a> </li>
+                </ul>
+            </nav>    
+        </div>
+        <div id="menuBtn">
+            <img src="../images/menu.png" id="menu">
+        </div>
+        <section class="title">
+            <h3> My Projects </h3> <hr>
+        </section>
+        <section class="projects">
+            <div class="row">
+                <div class="pro-col">
+                    <a href="aravhtml.html"> My First HTML Project </a> <br>
+                    <a href="https://handymart.gq"> My First Copy Website </a> <br>
+                    <a href="https://aravportfolio.netlify.app"> My Portfolio Website </a> <br>
+                    <a href="responsive2.html"> My Responsive Sign In Form </a> <br>
+                </div>
+                <div class="pro-col">
+                    <img src="../images/project.jpg">
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <footer>
+                <h4> Thanks For Visiting </h4>
+                <p> Thank you very much for visiting my website </p>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-google"></i> <br>
+                <i class="fa fa-star" id="starFa"></i> <p id="footerPara"> Made By Arav </p> <i class="fa fa-star"></i>
+            </footer>
+        </section>
+        <script>
+            // Menu \\
+            let menuBtn = document.getElementById("menuBtn");
+            let navLinks = document.getElementById("navLinks");
+            let menu = document.getElementById("menu");
+            navLinks.style.right = "-250px";
+            menuBtn.onclick = function(){
+                if (navLinks.style.right == "-250px") {     
+                    navLinks.style.right = "0";
+                    menu.src = "../images/close.png";
+                }
+                else {
+                    navLinks.style.right = "-250px";
+                    menu.src = "../images/menu.png";
+                }
+            }
+        </script>
+    </body>
+</html>

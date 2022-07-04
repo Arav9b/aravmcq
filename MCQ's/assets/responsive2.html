@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Sign In </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+        <script src="https://kit.fontawesome.com/41d5f40ef0.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+            *{
+                box-sizing: border-box;
+            }
+            body{
+                background-color: #e4eaee;
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+            }
+            .login-body{
+                background-color: #ecf0f3;
+                height: 80vh;
+                width: 300px;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                border-radius: 40px;
+                box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+                border: 1px solid #e6e6e6;
+                display: inline-block;
+            }
+            .logo img{
+                width: 90px;
+                height: 90px;
+                display: inline-block;
+                position: fixed;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+                top: 18%;
+                left: 50%;
+                transform: translate(-50% , -50%);
+                border-radius: 50%;
+                box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaaf, -8px -8px 15px #ffffff;
+            }
+            .title{
+                font-size: 25px;
+                font-weight: 600;
+                color: #555;
+                display: inline-block;
+                position: fixed;
+                top: 27%;
+                left: 50%;
+                transform: translate(-50% , 50%);
+                letter-spacing: 0.5px;
+            }
+            .sub-title{
+                font-size: 13px;
+                font-weight: 400;
+                color: #555;
+                position: fixed;
+                top: 35%;
+                left: 50%;
+                transform: translate(-50% , 50%);
+                letter-spacing: 3px;
+                display: inline-block;
+            }
+            #input1{
+                height: 45px;
+                width: 245px;
+                display: inline-block;
+                position: fixed;
+                top: 42%;
+                left: 50%;
+                transform: translate(-50% , 50%);
+                outline: none;
+                padding-left: 25px;
+                font-size: 15px; 
+            }
+            #input2{
+                height: 45px;
+                width: 245px;
+                display: inline-block;
+                position: fixed;
+                top: 56%;
+                left: 50%;
+                transform: translate(-50% , 50%);
+                outline: none;
+                padding-left: 25px;
+                font-size: 15px; 
+            }
+            #btn1{
+                outline: none;
+                text-decoration: none;
+                border: 1px solid #02c8db;
+                position: fixed;
+                top: 70%;
+                left: 50%;
+                transform: translate(-50% , 50%);
+                outline: none;
+                border-radius: 30px;
+                height: 40px;
+                width: 245px;
+                background-color: #02c8db;
+                font-size: 17px;
+                color: #ffffff;
+                font-weight: 600;
+                display: inline-block;
+            }
+            .footer{
+                position: fixed;
+                top: 81.5%;
+                left: 50%;
+                transform: translate(-50% , 50%);
+                font-size: 12.6px;
+                font-weight: 500;
+                color: #555;
+                letter-spacing: 0px;
+                display: inline-block;
+            }
+            .footer a{
+                position: fixed;
+                display: inline-block;
+                text-align: center;
+                width: 150px;
+                padding-top: 19px;
+                left: 0%;
+            }
+            #e{
+                position: fixed;
+                top: 49%;
+                left: 10.5%;
+                display: inline-block;
+            }
+            #k{
+                position: fixed;
+                top: 63%;
+                left: 10.5%;
+                display: inline-block;
+            }
+            .input input{
+                border: none;
+                box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+                background-color: #ecf0f3;
+                border-radius: 20px;
+                display: inline-block;
+            }
+            .fa{
+                color: #3e3e3e;
+            }
+            #btn1:hover{
+                background-color: #00b5c6;
+                transition: 0.4s;
+            }
+            ::placeholder{
+                color: #555;
+                font-size: 15px;
+                outline: none;
+                padding: 4px;
+            }
+            /* ----- Media Query Starts Here ----- */
+            @media (max-width: 700px){
+                    .login-body{
+                    background-color: #ecf0f3;
+                    height: 70vh;
+                    width: 200px;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50% , -50%);
+                    border-radius: 40px;
+                    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #ffffff;
+                    border: 1px solid #e6e6e6;
+                    display: inline-block;
+                }
+                .logo img{
+                    width: 70px;
+                    height: 70px;
+                    display: inline-block;
+                    position: fixed;
+                    justify-content: center;
+                    justify-items: center;
+                    align-items: center;
+                    top: 18%;
+                    left: 50%;
+                    transform: translate(-50% , -50%);
+                    border-radius: 50%;
+                    box-shadow: 0px 0px 2px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px  #a7aaaf, -8px -8px 15px #ffffff;
+                }
+                .title{
+                    font-size: 20px;
+                    font-weight: 550;
+                    color: #555;
+                    display: inline-block;
+                    position: fixed;
+                    top: 27%;
+                    left: 50%;
+                    transform: translate(-50% , 50%);
+                    letter-spacing: 0.5px;
+                }
+                .sub-title{
+                    font-size: 11px;
+                    font-weight: 400;
+                    color: #555;
+                    position: fixed;
+                    top: 35%;
+                    left: 50%;
+                    transform: translate(-50% , 50%);
+                    letter-spacing: 2px;
+                    display: inline-block;
+                }
+                #input1{
+                    height: 35px;
+                    width: 170px;
+                    display: inline-block;
+                    position: fixed;
+                    top: 42%;
+                    left: 50%;
+                    transform: translate(-50% , 50%);
+                    outline: none;
+                    padding-left: 20px;
+                    font-size: 12px; 
+                }
+                #input2{
+                    height: 35px;
+                    width: 170px;
+                    display: inline-block;
+                    position: fixed;
+                    top: 56%;
+                    left: 50%;
+                    transform: translate(-50% , 50%);
+                    outline: none;
+                    padding-left: 20px;
+                    font-size: 12px; 
+                }
+                #btn1{
+                    outline: none;
+                    text-decoration: none;
+                    border: 1px solid #02c8db;
+                    position: fixed;
+                    top: 70%;
+                    left: 50%;
+                    transform: translate(-50% , 50%);
+                    outline: none;
+                    border-radius: 30px;
+                    height: 34px;
+                    width: 170px;
+                    background-color: #02c8db;
+                    font-size: 14px;
+                    color: #ffffff;
+                    font-weight: 500;
+                    display: inline-block;
+                }
+                .footer{
+                    position: fixed;
+                    top: 81.5%;
+                    left: 50%;
+                    transform: translate(-50% , 50%);
+                    font-size: 11px;
+                    font-weight: 480;
+                    color: #555;
+                    letter-spacing: 0px;
+                    display: inline-block;
+                }
+                .footer a{
+                    position: fixed;
+                    display: inline-block;
+                    text-align: center;
+                    width: 146px;
+                    padding-top: 0px;
+                    left: 0%;
+                    padding-left: 5px;
+                }
+                #e{
+                    position: fixed;
+                    top: 49%;
+                    left: 10.4%;
+                    display: inline-block;
+                    font-size: 14px;
+                }
+                #k{
+                 position: fixed;
+                    top: 63%;
+                    left: 10.4%;
+                    display: inline-block;
+                    font-size: 14px;
+                }
+                .input input{
+                    border: none;
+                    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #ffffff;
+                    background-color: #ecf0f3;
+                    border-radius: 20px;
+                    display: inline-block;
+                }
+                .fa{
+                    color: #3e3e3e;
+                }
+                #btn1:hover{
+                    background-color: #00b5c6;
+                    transition: 0.4s;
+                }
+                ::placeholder{
+                    color: #555;
+                    font-size: 11px;
+                    outline: none;
+                    padding: 3px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="login-body">
+                <div class="logo"> <img src="../images/logo.jpg"> </div>
+                <div class="title"> Sign In </div>
+                <div class="sub-title"> Made Easy! </div>
+                <div class="input">
+                    <form>
+                        <input id="input1" type="email" placeholder="Email" required>
+                        <i class="fa fa-envelope" id="e"></i>
+                        <input id="input2" type="password" placeholder="Password" required>
+                        <i class="fa fa-key" id="k"></i>
+                        <button id="btn1" type="submit"> Sign In </button>
+                    </form>
+                </div>
+                <footer>
+                    <div class="footer">
+                        Don't have an account? <a href="comingsoon.html"> Sign Up </a>
+                    </div>
+                </footer>
+            </div>
+        </div> 
+    </body>   
+</html> 
